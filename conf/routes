@@ -1,0 +1,94 @@
+
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# An example controller showing a sample home page
+GET     /                           controllers.HomeController.index
+# An example controller showing how to use dependency injection
+GET     /count                      controllers.CountController.count
+# An example controller showing how to write asynchronous code
+GET     /message                    controllers.AsyncController.message
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+GET     /cart/createform            controllers.shop.CartController.addProductForm
+POST    /cart/create/:id             controllers.shop.CartController.addProduct(id:Int)
+GET     /cart/updateForm            controllers.shop.CartController.updateForm
+PUT     /cart/update/:id             controllers.shop.CartController.handleUpdate(id:Int)
+GET     /cart/delete/:id             controllers.shop.CartController.deleteProduct(id:Int)
+GET     /cart/list                  controllers.shop.CartController.listProducts
+GET     /cart/get/:id                controllers.shop.CartController.getProduct(id:Int)
+
+GET     /products/createform            controllers.shop.ProductController.createProductForm
+POST    /products/create/:id             controllers.shop.ProductController.createProduct(id:Int)
+GET     /products/updateForm            controllers.shop.ProductController.updateProductForm
+PUT     /products/update/:id             controllers.shop.ProductController.updateProduct(id:Int)
+GET     /products/delete/:id             controllers.shop.ProductController.deleteProduct(id:Int)
+GET     /products/list                  controllers.shop.ProductController.listProducts
+GET     /products/get/:id                controllers.shop.ProductController.getProduct(id:Int)
+
+GET     /payments/createform            controllers.shop.PaymentController.createPaymentForm
+POST    /payments/create/:id             controllers.shop.PaymentController.createPayment(id:Int)
+GET     /payments/updateForm            controllers.shop.PaymentController.updatePaymentForm
+PUT     /payments/update/:id             controllers.shop.PaymentController.updatePayment(id:Int)
+GET     /payments/delete/:id             controllers.shop.PaymentController.deletePayment(id:Int)
+GET     /payments/list                  controllers.shop.PaymentController.listPayments
+GET     /payments/get/:id                controllers.shop.PaymentController.getPayment(id:Int)
+
+GET     /categories/createform            controllers.shop.CategoriesController.createCategoryForm
+POST    /categories/create/:id             controllers.shop.CategoriesController.createCategory(id:Int)
+GET     /categories/updateForm            controllers.shop.CategoriesController.updateCategoryForm
+PUT     /categories/update/:id             controllers.shop.CategoriesController.updateCategory(id:Int)
+GET     /categories/delete/:id             controllers.shop.CategoriesController.deleteCategory(id:Int)
+GET     /categories/list                  controllers.shop.CategoriesController.listCategories
+GET     /categories/get/:id                controllers.shop.CategoriesController.getCategory(id:Int)
+
+GET     /users/createform            controllers.shop.UserController.createUserForm
+POST    /users/create/:id             controllers.shop.UserController.createUser(id:Int)
+GET     /users/updateForm            controllers.shop.UserController.updateUserForm
+PUT     /users/update/:id             controllers.shop.UserController.updateUser(id:Int)
+GET     /users/delete/:id             controllers.shop.UserController.deleteUser(id:Int)
+GET     /users/list                  controllers.shop.UserController.listUsers
+GET     /users/get/:id                controllers.shop.UserController.getUser(id:Int)
+
+GET     /orders/createform            controllers.shop.OrderController.createOrderForm
+POST    /orders/create/:id             controllers.shop.OrderController.createOrder(id:Int)
+GET     /orders/updateForm            controllers.shop.OrderController.updateOrderForm
+PUT     /orders/update/:id             controllers.shop.OrderController.updateOrder(id:Int)
+GET     /orders/delete/:id             controllers.shop.OrderController.deleteOrder(id:Int)
+GET     /orders/list                  controllers.shop.OrderController.listOrders
+GET     /orders/get/:id                controllers.shop.OrderController.getOrder(id:Int)
+
+GET     /returns/createform            controllers.shop.ReturnController.createReturnForm
+POST    /returns/create/:id             controllers.shop.ReturnController.createReturn(id:Int)
+GET     /returns/updateForm            controllers.shop.ReturnController.updateReturnForm
+PUT     /returns/update/:id             controllers.shop.ReturnController.updateReturn(id:Int)
+GET     /returns/delete/:id             controllers.shop.ReturnController.deleteReturn(id:Int)
+GET     /returns/list                  controllers.shop.ReturnController.listReturns
+GET     /returns/get/:id                controllers.shop.ReturnController.getReturn(id:Int)
+
+GET     /discounts/createform            controllers.shop.DiscountController.createDiscountForm
+POST    /discounts/create/:id             controllers.shop.DiscountController.createDiscount(id:Int)
+GET     /discounts/updateForm            controllers.shop.DiscountController.updateDiscountForm
+PUT     /discounts/update/:id             controllers.shop.DiscountController.updateDiscount(id:Int)
+GET     /discounts/delete/:id             controllers.shop.DiscountController.deleteDiscount(id:Int)
+GET     /discounts/list                  controllers.shop.DiscountController.listDiscounts
+GET     /discounts/get/:id                controllers.shop.DiscountController.getDiscount(id:Int)
+
+GET     /employees/createform            controllers.shop.EmployeeController.addEmployeeForm
+POST    /employees/create/:id             controllers.shop.EmployeeController.addEmployee(id:Int)
+GET     /employees/updateForm            controllers.shop.EmployeeController.updateEmployeeForm
+PUT     /employees/update/:id             controllers.shop.EmployeeController.updateEmployee(id:Int)
+GET     /employees/delete/:id             controllers.shop.EmployeeController.deleteEmployee(id:Int)
+GET     /employees/list                  controllers.shop.EmployeeController.listEmployees
+GET     /employees/get/:id                controllers.shop.EmployeeController.getEmployee(id:Int)
+
+GET     /opinions/createform            controllers.shop.OpinionController.createOpinionForm
+POST    /opinions/create/:id             controllers.shop.OpinionController.createOpinion(id:Int)
+GET     /opinions/updateForm            controllers.shop.OpinionController.updateOpinionForm
+PUT     /opinions/update/:id             controllers.shop.OpinionController.updateOpinion(id:Int)
+GET     /opinions/delete/:id             controllers.shop.OpinionController.deleteOpinion(id:Int)
+GET     /opinions/list                  controllers.shop.OpinionController.listOpinions
+GET     /opinions/get/:id                controllers.shop.OpinionController.getOpinion(id:Int)
